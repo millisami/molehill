@@ -1,0 +1,5 @@
+<!-- render_ajax_flash page -->
+
+<% unless @post.new_record? %>
+  $('#posts').prepend("<%= escape_javascript render @post %>");
+<% end %>

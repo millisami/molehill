@@ -1,7 +1,6 @@
 %li{:class => "post #{"complete" unless post.open?}"}
-  = gravatar_image_tag post.user.email_address, {:size => 32} 
   %p
-    %strong= "#{post.user.username}"
+    %h4= "#{post.user.username.capitalize}"
     = post_body post
 
   %p.meta 

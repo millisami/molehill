@@ -155,3 +155,7 @@ ol#steps {
     color: #404040;
     margin: 0.5em 0px 1em 0px;
     line-height: 1.25em; }
+h4 {
+  background: none repeat scroll 0 0 #AAAAAA;
+     padding: 5px;
+}
