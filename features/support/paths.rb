@@ -7,10 +7,10 @@ module NavigationHelpers
   #
   def path_to(page_name, params = {})
     case page_name
-    
+
     when /the home\s?page/
       '/'
-    
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -51,7 +51,7 @@ module NavigationHelpers
 
     when /the login page/i
       login_path(params)
-      
+
     when /the session(s?) page/i
       sessions_path(params)
 
@@ -63,7 +63,7 @@ module NavigationHelpers
 
     when /the new user page/i
       new_user_path(params)
-      
+
     when /the (verify|verification) page/i
       verify_path(params)
 

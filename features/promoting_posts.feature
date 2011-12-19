@@ -83,7 +83,7 @@ Scenario: A completed case should not show a promotion link
   And post "post" is complete
   When I am on the home page
   Then post "post" should not be open
-  And I should not see "Promote" within "li.post:first" 
+  And I should not see "Promote" within "li.post:first"
 
 Scenario: A declined case should not show a promotion link
   Given I am logged in
@@ -91,4 +91,4 @@ Scenario: A declined case should not show a promotion link
   And "post" belongs to me
   And post "post" is declined
   When I am on the home page
-  Then I should not see "Promote" within "li.post:first" 
+  Then I should not see "Promote" within "li.post:first"

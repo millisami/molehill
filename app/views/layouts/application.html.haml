@@ -1,6 +1,6 @@
 !!! Strict
 %html{html_attrs}
-  
+
   %head
     %title
       = h(yield(:title) || "Molehill: Simple Issue Tracking")
@@ -11,7 +11,7 @@
     = javascript_include_tag 'jquery.idle.js', 'jrails.js', 'application.js'
     = stylesheet_link_tag 'application'
     = yield(:head)
-  
+
   %body
     %a{:href => "http://github.com/cblunt/molehill"}
       %img#github{:src => "http://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png", :alt => "Fork molehill on GitHub"}
@@ -39,7 +39,7 @@
 
       #flash_error{:class => "#{"hidden" unless flash[:error]}"}
         = flash[:error]
-      
+
       - if show_title?
         %h1=h yield(:title)
 

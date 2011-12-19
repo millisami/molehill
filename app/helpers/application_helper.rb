@@ -36,7 +36,7 @@ module ApplicationHelper
     url << "?gravatar_id=#{Digest::MD5.hexdigest(email)}"
     url << "&format=jpg"
     url << "&default=#{url_for("/images/user_#{options[:size]}.png")}"
-    
+
     url
   end
 
