@@ -1,5 +1,5 @@
 #filters
-  - form_tag posts_path, :method => :get do 
+  - form_tag posts_path, :method => :get do
     = text_field_tag :tag_string, params[:tag_string] || ""
     = submit_tag "Search"
 

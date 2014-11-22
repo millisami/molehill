@@ -24,9 +24,9 @@ class PostsController < ApplicationController
       flash[:error] = "It looks like your post couldn't be saved."
 
       respond_to do |format|
-        format.html { 
+        format.html {
           fetch_posts
-          render :index 
+          render :index
         }
 
         format.js
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
       flash[:error] = "You cannot promote your own post"
     end
 
-    redirect_to posts_path and return 
+    redirect_to posts_path and return
   end
 
   def complete
@@ -52,8 +52,8 @@ class PostsController < ApplicationController
     else
       flash[:error] = "The case could not be completed."
     end
-      
-    redirect_to posts_path and return 
+
+    redirect_to posts_path and return
   end
 
   def decline
@@ -64,12 +64,12 @@ class PostsController < ApplicationController
     else
       flash[:error] = "The case could not be declined."
     end
-      
-    redirect_to posts_path and return 
+
+    redirect_to posts_path and return
   end
 
 
-protected 
+protected
   def fetch_post options = {}
     if options[:scope_by_user]
       @post = options[:scope_by_user].posts.find_by_id(params[:id])

@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
   end
-  
+
   def create
     user = User.authenticate(params[:email_address], params[:password])
     if user
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def destroy
     session[:user_id] = nil
     flash[:success] = "You have been logged out."

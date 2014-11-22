@@ -3,7 +3,7 @@
     %h4= "#{post.user.username.capitalize}"
     = post_body post
 
-  %p.meta 
+  %p.meta
     - if post.scored?
       = "Score: #{post.score}"
       %br
@@ -14,7 +14,7 @@
     - elsif post.declined?
       = "Declined #{distance_of_time_in_words_to_now(post.declined_at)} ago."
       %br
-    
+
     = "Opened #{distance_of_time_in_words_to_now(post.created_at)} ago."
 
   %div.promote
@@ -38,7 +38,7 @@
     %p.tasks.context_sensitive
       Mark as
       = link_to "Completed", complete_post_path(post), :method => :put
-      or 
+      or
       = link_to "Declined", decline_post_path(post), :method => :put
 
   .clear

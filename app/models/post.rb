@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
   def score
     score = 0
-    self.votes.promotions.collect do |v| 
+    self.votes.promotions.collect do |v|
       score += v.score
     end
 

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(params[:user])
 
@@ -15,10 +15,10 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def verify
     @user = User.find_by_id(params[:id])
-  
+
     if @user and @user.verify_with_key(params[:verification_key])
       flash[:success] = "Thank you for verifying your account! You are now signed in."
       session[:user_id] = @user.id

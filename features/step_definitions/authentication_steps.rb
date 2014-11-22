@@ -24,7 +24,7 @@ end
 
 Given /^a user exists who is verified$/ do
   user = Factory(:user)
-  user.verify_with_key(user.verification_key)  
+  user.verify_with_key(user.verification_key)
 end
 
 Then /^I should( not)? be logged in/ do |flag|

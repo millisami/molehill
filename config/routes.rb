@@ -34,7 +34,7 @@ Molehill::Application.routes.draw do
   resources :sessions
   resources :users
   resources :posts do
-    member do 
+    member do
       put :promote
       put :complete
       put :decline

@@ -14,5 +14,5 @@ cucumber:
   google_analytics_code: ~
 
 production:
-#  host: 
+#  host:
 #  google_tracking_code: UA-12345-67

@@ -9,14 +9,14 @@ end
 When /^(?:|I) (?:|try to )visit (.+) with (.+)$/ do |page_name, param_string|
   params = {}
   param_string.split(",").each do |match|
-    parts = match.split(":") 
-    
+    parts = match.split(":")
+
     key = parts[0]
     val = parts[1]
-    
+
     params[key.to_s.strip] = val.to_s.strip
   end
-  
+
   visit path_to(page_name, params)
 end
 

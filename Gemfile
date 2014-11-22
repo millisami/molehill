@@ -39,7 +39,7 @@ group :test do
   gem 'email_spec'
   gem 'factory_girl'
   gem 'faker'
-  gem 'launchy' 
+  gem 'launchy'
   gem 'pickle'
   gem 'rcov'
   gem 'rspec'

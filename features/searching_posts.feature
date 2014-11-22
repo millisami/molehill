@@ -6,7 +6,7 @@ Feature: Searching
 Scenario: Searching for cases by hashtag should only display those posts that have a matching hashtag
   Given I am not logged in
   And the following posts exist:
-    | body | 
+    | body |
     | this is a post that will be #matched |
     | this is a post that will be #unmatched |
   Then 2 posts should exist
@@ -24,7 +24,7 @@ Scenario: Searching for cases by hashtag should only display those posts that ha
 Scenario: Searching should show filters in use
   Given I am not logged in
   And the following posts exist:
-    | body | 
+    | body |
     | this is a post that will be #matched |
     | this is a post that will be #unmatched |
   Then 2 posts should exist
@@ -37,7 +37,7 @@ Scenario: Searching should show filters in use
 Scenario: People should be able to clear filters
   Given I am not logged in
   And the following posts exist:
-    | body | 
+    | body |
     | this is a post that will be #matched |
     | this is a post that will be #unmatched |
   Then 2 posts should exist
@@ -59,7 +59,7 @@ Scenario: People should see a search form
 Scenario: Searching using the search form should display matching posts
   Given I am not logged in
   And the following posts exist:
-    | body | 
+    | body |
     | this is a post that will be #matched |
     | this is a post that will be #unmatched |
   Then 2 posts should exist
@@ -74,7 +74,7 @@ Scenario: Searching using the search form should display matching posts
 Scenario: Searching multiple terms should return all matches
   Given I am not logged in
   And the following posts exist:
-    | body | 
+    | body |
     | this is a post that will be #matched |
     | this is a post that will be #unmatched |
     | this is a #post that will be matched |

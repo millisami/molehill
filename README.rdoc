@@ -8,7 +8,7 @@ track Molehill's development at http://chrisblunt.com/blog
 
 == Installation
 To clone a copy of molehill:
- 
+
   git clone git://github.com/cblunt/molehill.git
   cd molehill
 
@@ -17,21 +17,21 @@ To clone a copy of molehill:
 
 You can setup application configuration (currently the code for Google Analytics) in
 +config/application.yml+.
-  
+
   rake db:migrate
   rake db:migrate RAILS_ENV=cucumber
 
-Molehill depends on a number of gems. They are configured in +config/environment.rb+ 
+Molehill depends on a number of gems. They are configured in +config/environment.rb+
 To install the required gems:
-  
+
   rake gems:install
-  
-To run all cucumber tests 
+
+To run all cucumber tests
   cucumber
-  
+
 To provide an RCov report
   rake cucumber:rcov
-  
+
 == Deployment
 
 Molehill is deployed using Capistrano. An example deploy script is included in the repository:
@@ -46,7 +46,7 @@ that's done, you can setup your target server:
 The capistrano script expects some configuration files to be stored on the
 deployment server (not in the repository due to security). These are symlinked after every deploy:
 
-  {shared_path}/config/application.yml 
+  {shared_path}/config/application.yml
   {shared_path}/config/database.yml # Configures your database connections
   {shared_path}/config/environments/production.rb # Contains your SMTP settings for notification emails
 
